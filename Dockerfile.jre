@@ -1,0 +1,7 @@
+FROM alpine:3.6
+
+RUN mkdir custom-jre
+ADD target/myjre/ /custom-jre/
+
+RUN ls -la /custom-jre/bin
+

@@ -28,9 +28,9 @@ public class Server extends AbstractVerticle {
 		LOG.info("Vertx Up!");
 		HttpServer server = vertx.createHttpServer(
 				new HttpServerOptions()
-						.setUseAlpn(true)
-						.setKeyCertOptions(new JksOptions().setPath("server-keystore.jks").setPassword("wibble"))
-						.setSsl(true)
+					//	.setUseAlpn(true)
+					//	.setKeyCertOptions(new JksOptions().setPath("server-keystore.jks").setPassword("wibble"))
+					//	.setSsl(true)
 		);
 		server.requestHandler(req -> {
 			LOG.info("Path "+req.path() +" -> " +req.response().getStatusMessage());
